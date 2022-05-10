@@ -1,0 +1,572 @@
+game: bridge
+
+GameType.chance_mode = ChanceMode.EXPLICIT_STOCHASTIC
+GameType.dynamics = Dynamics.SEQUENTIAL
+GameType.information = Information.IMPERFECT_INFORMATION
+GameType.long_name = "Contract Bridge"
+GameType.max_num_players = 4
+GameType.min_num_players = 4
+GameType.parameter_specification = ["dealer_vul", "non_dealer_vul", "use_double_dummy_result"]
+GameType.provides_information_state_string = False
+GameType.provides_information_state_tensor = False
+GameType.provides_observation_string = True
+GameType.provides_observation_tensor = True
+GameType.provides_factored_observation_string = False
+GameType.reward_model = RewardModel.TERMINAL
+GameType.short_name = "bridge"
+GameType.utility = Utility.ZERO_SUM
+
+NumDistinctActions() = 90
+PolicyTensorShape() = [90]
+MaxChanceOutcomes() = 52
+GetParameters() = {dealer_vul=False,non_dealer_vul=False,use_double_dummy_result=True}
+NumPlayers() = 4
+MinUtility() = -7600.0
+MaxUtility() = 7600.0
+UtilitySum() = None
+ObservationTensorShape() = [571]
+ObservationTensorLayout() = TensorLayout.CHW
+ObservationTensorSize() = 571
+MaxGameLength() = 319
+ToString() = "bridge()"
+
+# State 0
+# Vul: None
+#         S
+#         H
+#         D
+#         C
+# S               S
+# H               H
+# D               D
+# C               C
+#         S
+#         H
+#         D
+#         C
+IsTerminal() = False
+History() = []
+HistoryString() = ""
+IsChanceNode() = True
+IsSimultaneousNode() = False
+CurrentPlayer() = -1
+ObservationString(0) = "Vul: None\nS none\nH none\nD none\nC none\n"
+ObservationString(1) = "Vul: None\nS none\nH none\nD none\nC none\n"
+ObservationString(2) = "Vul: None\nS none\nH none\nD none\nC none\n"
+ObservationString(3) = "Vul: None\nS none\nH none\nD none\nC none\n"
+ObservationTensor(0): zeros(571)
+ObservationTensor(1): zeros(571)
+ObservationTensor(2): zeros(571)
+ObservationTensor(3): zeros(571)
+ChanceOutcomes() = [(0, 0.019230769230769232), (1, 0.019230769230769232), (2, 0.019230769230769232), (3, 0.019230769230769232), (4, 0.019230769230769232), (5, 0.019230769230769232), (6, 0.019230769230769232), (7, 0.019230769230769232), (8, 0.019230769230769232), (9, 0.019230769230769232), (10, 0.019230769230769232), (11, 0.019230769230769232), (12, 0.019230769230769232), (13, 0.019230769230769232), (14, 0.019230769230769232), (15, 0.019230769230769232), (16, 0.019230769230769232), (17, 0.019230769230769232), (18, 0.019230769230769232), (19, 0.019230769230769232), (20, 0.019230769230769232), (21, 0.019230769230769232), (22, 0.019230769230769232), (23, 0.019230769230769232), (24, 0.019230769230769232), (25, 0.019230769230769232), (26, 0.019230769230769232), (27, 0.019230769230769232), (28, 0.019230769230769232), (29, 0.019230769230769232), (30, 0.019230769230769232), (31, 0.019230769230769232), (32, 0.019230769230769232), (33, 0.019230769230769232), (34, 0.019230769230769232), (35, 0.019230769230769232), (36, 0.019230769230769232), (37, 0.019230769230769232), (38, 0.019230769230769232), (39, 0.019230769230769232), (40, 0.019230769230769232), (41, 0.019230769230769232), (42, 0.019230769230769232), (43, 0.019230769230769232), (44, 0.019230769230769232), (45, 0.019230769230769232), (46, 0.019230769230769232), (47, 0.019230769230769232), (48, 0.019230769230769232), (49, 0.019230769230769232), (50, 0.019230769230769232), (51, 0.019230769230769232)]
+LegalActions() = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+StringLegalActions() = ["C2", "D2", "H2", "S2", "C3", "D3", "H3", "S3", "C4", "D4", "H4", "S4", "C5", "D5", "H5", "S5", "C6", "D6", "H6", "S6", "C7", "D7", "H7", "S7", "C8", "D8", "H8", "S8", "C9", "D9", "H9", "S9", "CT", "DT", "HT", "ST", "CJ", "DJ", "HJ", "SJ", "CQ", "DQ", "HQ", "SQ", "CK", "DK", "HK", "SK", "CA", "DA", "HA", "SA"]
+
+# Apply action "ST"
+action: 35
+
+# State 1
+# Vul: None
+#         S T
+#         H
+#         D
+#         C
+# S               S
+# H               H
+# D               D
+# C               C
+#         S
+#         H
+#         D
+#         C
+IsTerminal() = False
+History() = [35]
+HistoryString() = "35"
+IsChanceNode() = True
+IsSimultaneousNode() = False
+CurrentPlayer() = -1
+ObservationString(0) = "Vul: None\nS T\nH none\nD none\nC none\n"
+ObservationString(1) = "Vul: None\nS none\nH none\nD none\nC none\n"
+ObservationString(2) = "Vul: None\nS none\nH none\nD none\nC none\n"
+ObservationString(3) = "Vul: None\nS none\nH none\nD none\nC none\n"
+ObservationTensor(0): zeros(571)
+ObservationTensor(1): zeros(571)
+ObservationTensor(2): zeros(571)
+ObservationTensor(3): zeros(571)
+ChanceOutcomes() = [(0, 0.0196078431372549), (1, 0.0196078431372549), (2, 0.0196078431372549), (3, 0.0196078431372549), (4, 0.0196078431372549), (5, 0.0196078431372549), (6, 0.0196078431372549), (7, 0.0196078431372549), (8, 0.0196078431372549), (9, 0.0196078431372549), (10, 0.0196078431372549), (11, 0.0196078431372549), (12, 0.0196078431372549), (13, 0.0196078431372549), (14, 0.0196078431372549), (15, 0.0196078431372549), (16, 0.0196078431372549), (17, 0.0196078431372549), (18, 0.0196078431372549), (19, 0.0196078431372549), (20, 0.0196078431372549), (21, 0.0196078431372549), (22, 0.0196078431372549), (23, 0.0196078431372549), (24, 0.0196078431372549), (25, 0.0196078431372549), (26, 0.0196078431372549), (27, 0.0196078431372549), (28, 0.0196078431372549), (29, 0.0196078431372549), (30, 0.0196078431372549), (31, 0.0196078431372549), (32, 0.0196078431372549), (33, 0.0196078431372549), (34, 0.0196078431372549), (36, 0.0196078431372549), (37, 0.0196078431372549), (38, 0.0196078431372549), (39, 0.0196078431372549), (40, 0.0196078431372549), (41, 0.0196078431372549), (42, 0.0196078431372549), (43, 0.0196078431372549), (44, 0.0196078431372549), (45, 0.0196078431372549), (46, 0.0196078431372549), (47, 0.0196078431372549), (48, 0.0196078431372549), (49, 0.0196078431372549), (50, 0.0196078431372549), (51, 0.0196078431372549)]
+LegalActions() = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51]
+StringLegalActions() = ["C2", "D2", "H2", "S2", "C3", "D3", "H3", "S3", "C4", "D4", "H4", "S4", "C5", "D5", "H5", "S5", "C6", "D6", "H6", "S6", "C7", "D7", "H7", "S7", "C8", "D8", "H8", "S8", "C9", "D9", "H9", "S9", "CT", "DT", "HT", "CJ", "DJ", "HJ", "SJ", "CQ", "DQ", "HQ", "SQ", "CK", "DK", "HK", "SK", "CA", "DA", "HA", "SA"]
+
+# Apply action "C7"
+action: 20
+
+# State 2
+# Apply action "DK"
+action: 45
+
+# State 3
+# Apply action "S6"
+action: 19
+
+# State 4
+# Apply action "DA"
+action: 49
+
+# State 5
+# Apply action "CQ"
+action: 40
+
+# State 6
+# Apply action "SA"
+action: 51
+
+# State 7
+# Apply action "S4"
+action: 11
+
+# State 8
+# Apply action "S2"
+action: 3
+
+# State 9
+# Apply action "S8"
+action: 27
+
+# State 10
+# Apply action "SJ"
+action: 39
+
+# State 11
+# Apply action "SK"
+action: 47
+
+# State 12
+# Apply action "CK"
+action: 44
+
+# State 13
+# Apply action "C2"
+action: 0
+
+# State 14
+# Apply action "D5"
+action: 13
+
+# State 15
+# Apply action "CJ"
+action: 36
+
+# State 16
+# Apply action "C4"
+action: 8
+
+# State 17
+# Apply action "HA"
+action: 50
+
+# State 18
+# Apply action "D8"
+action: 25
+
+# State 19
+# Apply action "S5"
+action: 15
+
+# State 20
+# Apply action "H9"
+action: 30
+
+# State 21
+# Apply action "H2"
+action: 2
+
+# State 22
+# Apply action "CT"
+action: 32
+
+# State 23
+# Apply action "S7"
+action: 23
+
+# State 24
+# Apply action "CA"
+action: 48
+
+# State 25
+# Apply action "H4"
+action: 10
+
+# State 26
+# Apply action "D2"
+action: 1
+
+# State 27
+# Apply action "HK"
+action: 46
+
+# State 28
+# Apply action "DQ"
+action: 41
+
+# State 29
+# Apply action "D4"
+action: 9
+
+# State 30
+# Apply action "C5"
+action: 12
+
+# State 31
+# Apply action "D9"
+action: 29
+
+# State 32
+# Apply action "HQ"
+action: 42
+
+# State 33
+# Apply action "H8"
+action: 26
+
+# State 34
+# Apply action "C9"
+action: 28
+
+# State 35
+# Apply action "DJ"
+action: 37
+
+# State 36
+# Apply action "HT"
+action: 34
+
+# State 37
+# Apply action "S3"
+action: 7
+
+# State 38
+# Apply action "H6"
+action: 18
+
+# State 39
+# Apply action "C3"
+action: 4
+
+# State 40
+# Apply action "D6"
+action: 17
+
+# State 41
+# Apply action "C8"
+action: 24
+
+# State 42
+# Apply action "DT"
+action: 33
+
+# State 43
+# Apply action "H3"
+action: 6
+
+# State 44
+# Apply action "D7"
+action: 21
+
+# State 45
+# Apply action "H7"
+action: 22
+
+# State 46
+# Apply action "HJ"
+action: 38
+
+# State 47
+# Apply action "H5"
+action: 14
+
+# State 48
+# Apply action "D3"
+action: 5
+
+# State 49
+# Apply action "S9"
+action: 31
+
+# State 50
+# Apply action "C6"
+action: 16
+
+# State 51
+# Apply action "SQ"
+action: 43
+
+# State 52
+# Vul: None
+#         S T2
+#         H QT9
+#         D AQ763
+#         C AK4
+# S KQ7654        S 983
+# H K53           H A8742
+# D J9            D 4
+# C J3            C Q872
+#         S AJ
+#         H J6
+#         D KT852
+#         C T965
+IsTerminal() = False
+History() = [35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43]
+HistoryString() = "35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 0
+ObservationString(0) = "Vul: None\nS T2\nH QT9\nD AQ763\nC AK4\n"
+ObservationString(1) = "Vul: None\nS 983\nH A8742\nD 4\nC Q872\n"
+ObservationString(2) = "Vul: None\nS AJ\nH J6\nD KT852\nC T965\n"
+ObservationString(3) = "Vul: None\nS KQ7654\nH K53\nD J9\nC J3\n"
+ObservationTensor(0): binvec(571, 0x4500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a402201183460000000000000000000000)
+ObservationTensor(1): binvec(571, 0x45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050b00558804010000000000000000000000)
+ObservationTensor(2): binvec(571, 0x45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020065024618208000000000000000000000)
+ObservationTensor(3): binvec(571, 0x45000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005098882060980000000000000000000000)
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [52, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89]
+StringLegalActions() = ["Pass", "1C", "1D", "1H", "1S", "1N", "2C", "2D", "2H", "2S", "2N", "3C", "3D", "3H", "3S", "3N", "4C", "4D", "4H", "4S", "4N", "5C", "5D", "5H", "5S", "5N", "6C", "6D", "6H", "6S", "6N", "7C", "7D", "7H", "7S", "7N"]
+
+# Apply action "1N"
+action: 59
+
+# State 53
+# Vul: None
+#         S T2
+#         H QT9
+#         D AQ763
+#         C AK4
+# S KQ7654        S 983
+# H K53           H A8742
+# D J9            D 4
+# C J3            C Q872
+#         S AJ
+#         H J6
+#         D KT852
+#         C T965
+#
+# West  North East  South
+#       1N
+IsTerminal() = False
+History() = [35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59]
+HistoryString() = "35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Vul: None\nS T2\nH QT9\nD AQ763\nC AK4\n\nWest  North East  South\n      1N    "
+ObservationString(1) = "Vul: None\nS 983\nH A8742\nD 4\nC Q872\n\nWest  North East  South\n      1N    ?"
+ObservationString(2) = "Vul: None\nS AJ\nH J6\nD KT852\nC T965\n\nWest  North East  South\n      1N    "
+ObservationString(3) = "Vul: None\nS KQ7654\nH K53\nD J9\nC J3\n\nWest  North East  South\n      1N    "
+ObservationTensor(0): binvec(571, 0x4500000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a402201183460000000000000000000000)
+ObservationTensor(1): binvec(571, 0x45000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050b00558804010000000000000000000000)
+ObservationTensor(2): binvec(571, 0x45000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020065024618208000000000000000000000)
+ObservationTensor(3): binvec(571, 0x45000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005098882060980000000000000000000000)
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [52, 53, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89]
+StringLegalActions() = ["Pass", "Dbl", "2C", "2D", "2H", "2S", "2N", "3C", "3D", "3H", "3S", "3N", "4C", "4D", "4H", "4S", "4N", "5C", "5D", "5H", "5S", "5N", "6C", "6D", "6H", "6S", "6N", "7C", "7D", "7H", "7S", "7N"]
+
+# Apply action "Pass"
+action: 52
+
+# State 54
+# Vul: None
+#         S T2
+#         H QT9
+#         D AQ763
+#         C AK4
+# S KQ7654        S 983
+# H K53           H A8742
+# D J9            D 4
+# C J3            C Q872
+#         S AJ
+#         H J6
+#         D KT852
+#         C T965
+#
+# West  North East  South
+#       1N    Pass
+IsTerminal() = False
+History() = [35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52]
+HistoryString() = "35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 2
+ObservationString(0) = "Vul: None\nS T2\nH QT9\nD AQ763\nC AK4\n\nWest  North East  South\n      1N    Pass  "
+ObservationString(1) = "Vul: None\nS 983\nH A8742\nD 4\nC Q872\n\nWest  North East  South\n      1N    Pass  "
+ObservationString(2) = "Vul: None\nS AJ\nH J6\nD KT852\nC T965\n\nWest  North East  South\n      1N    Pass  ?"
+ObservationString(3) = "Vul: None\nS KQ7654\nH K53\nD J9\nC J3\n\nWest  North East  South\n      1N    Pass  "
+ObservationTensor(0): binvec(571, 0x4500000000000004000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000a402201183460000000000000000000000)
+ObservationTensor(1): binvec(571, 0x45000000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000050b00558804010000000000000000000000)
+ObservationTensor(2): binvec(571, 0x45000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000020065024618208000000000000000000000)
+ObservationTensor(3): binvec(571, 0x45000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005098882060980000000000000000000000)
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [52, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89]
+StringLegalActions() = ["Pass", "2C", "2D", "2H", "2S", "2N", "3C", "3D", "3H", "3S", "3N", "4C", "4D", "4H", "4S", "4N", "5C", "5D", "5H", "5S", "5N", "6C", "6D", "6H", "6S", "6N", "7C", "7D", "7H", "7S", "7N"]
+
+# Apply action "3N"
+action: 69
+
+# State 55
+# Vul: None
+#         S T2
+#         H QT9
+#         D AQ763
+#         C AK4
+# S KQ7654        S 983
+# H K53           H A8742
+# D J9            D 4
+# C J3            C Q872
+#         S AJ
+#         H J6
+#         D KT852
+#         C T965
+#
+# West  North East  South
+#       1N    Pass  3N
+IsTerminal() = False
+History() = [35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69]
+HistoryString() = "35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 3
+ObservationString(0) = "Vul: None\nS T2\nH QT9\nD AQ763\nC AK4\n\nWest  North East  South\n      1N    Pass  3N    "
+ObservationString(1) = "Vul: None\nS 983\nH A8742\nD 4\nC Q872\n\nWest  North East  South\n      1N    Pass  3N    "
+ObservationString(2) = "Vul: None\nS AJ\nH J6\nD KT852\nC T965\n\nWest  North East  South\n      1N    Pass  3N    "
+ObservationString(3) = "Vul: None\nS KQ7654\nH K53\nD J9\nC J3\n\nWest  North East  South\n      1N    Pass  3N    \n?"
+ObservationTensor(0): binvec(571, 0x4500000000000004000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000a402201183460000000000000000000000)
+ObservationTensor(1): binvec(571, 0x45000000000000008000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000050b00558804010000000000000000000000)
+ObservationTensor(2): binvec(571, 0x45000000000000010000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000020065024618208000000000000000000000)
+ObservationTensor(3): binvec(571, 0x45000000000000020000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000005098882060980000000000000000000000)
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [52, 53, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89]
+StringLegalActions() = ["Pass", "Dbl", "4C", "4D", "4H", "4S", "4N", "5C", "5D", "5H", "5S", "5N", "6C", "6D", "6H", "6S", "6N", "7C", "7D", "7H", "7S", "7N"]
+
+# Apply action "Pass"
+action: 52
+
+# State 56
+# Vul: None
+#         S T2
+#         H QT9
+#         D AQ763
+#         C AK4
+# S KQ7654        S 983
+# H K53           H A8742
+# D J9            D 4
+# C J3            C Q872
+#         S AJ
+#         H J6
+#         D KT852
+#         C T965
+#
+# West  North East  South
+#       1N    Pass  3N
+# Pass
+IsTerminal() = False
+History() = [35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69, 52]
+HistoryString() = "35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69, 52"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 0
+ObservationString(0) = "Vul: None\nS T2\nH QT9\nD AQ763\nC AK4\n\nWest  North East  South\n      1N    Pass  3N    \nPass  ?"
+ObservationString(1) = "Vul: None\nS 983\nH A8742\nD 4\nC Q872\n\nWest  North East  South\n      1N    Pass  3N    \nPass  "
+ObservationString(2) = "Vul: None\nS AJ\nH J6\nD KT852\nC T965\n\nWest  North East  South\n      1N    Pass  3N    \nPass  "
+ObservationString(3) = "Vul: None\nS KQ7654\nH K53\nD J9\nC J3\n\nWest  North East  South\n      1N    Pass  3N    \nPass  "
+ObservationTensor(0): binvec(571, 0x4500000000000004000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000a402201183460000000000000000000000)
+ObservationTensor(1): binvec(571, 0x45000000000000008000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000050b00558804010000000000000000000000)
+ObservationTensor(2): binvec(571, 0x45000000000000010000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000020065024618208000000000000000000000)
+ObservationTensor(3): binvec(571, 0x45000000000000020000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000005098882060980000000000000000000000)
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [52, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89]
+StringLegalActions() = ["Pass", "4C", "4D", "4H", "4S", "4N", "5C", "5D", "5H", "5S", "5N", "6C", "6D", "6H", "6S", "6N", "7C", "7D", "7H", "7S", "7N"]
+
+# Apply action "Pass"
+action: 52
+
+# State 57
+# Vul: None
+#         S T2
+#         H QT9
+#         D AQ763
+#         C AK4
+# S KQ7654        S 983
+# H K53           H A8742
+# D J9            D 4
+# C J3            C Q872
+#         S AJ
+#         H J6
+#         D KT852
+#         C T965
+#
+# West  North East  South
+#       1N    Pass  3N
+# Pass  Pass
+IsTerminal() = False
+History() = [35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69, 52, 52]
+HistoryString() = "35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69, 52, 52"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = 1
+ObservationString(0) = "Vul: None\nS T2\nH QT9\nD AQ763\nC AK4\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  "
+ObservationString(1) = "Vul: None\nS 983\nH A8742\nD 4\nC Q872\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  ?"
+ObservationString(2) = "Vul: None\nS AJ\nH J6\nD KT852\nC T965\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  "
+ObservationString(3) = "Vul: None\nS KQ7654\nH K53\nD J9\nC J3\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  "
+ObservationTensor(0): binvec(571, 0x4500000000000004000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000a402201183460000000000000000000000)
+ObservationTensor(1): binvec(571, 0x45000000000000008000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000050b00558804010000000000000000000000)
+ObservationTensor(2): binvec(571, 0x45000000000000010000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000020065024618208000000000000000000000)
+ObservationTensor(3): binvec(571, 0x45000000000000020000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000005098882060980000000000000000000000)
+Rewards() = [0, 0, 0, 0]
+Returns() = [0, 0, 0, 0]
+LegalActions() = [52, 53, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89]
+StringLegalActions() = ["Pass", "Dbl", "4C", "4D", "4H", "4S", "4N", "5C", "5D", "5H", "5S", "5N", "6C", "6D", "6H", "6S", "6N", "7C", "7D", "7H", "7S", "7N"]
+
+# Apply action "Pass"
+action: 52
+
+# State 58
+# Vul: None
+#         S T2
+#         H QT9
+#         D AQ763
+#         C AK4
+# S KQ7654        S 983
+# H K53           H A8742
+# D J9            D 4
+# C J3            C Q872
+#         S AJ
+#         H J6
+#         D KT852
+#         C T965
+#
+# West  North East  South
+#       1N    Pass  3N
+# Pass  Pass  Pass
+#
+# Declarer tricks: 8
+# Score: N/S -50 E/W 50
+IsTerminal() = True
+History() = [35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69, 52, 52, 52]
+HistoryString() = "35, 20, 45, 19, 49, 40, 51, 11, 3, 27, 39, 47, 44, 0, 13, 36, 8, 50, 25, 15, 30, 2, 32, 23, 48, 10, 1, 46, 41, 9, 12, 29, 42, 26, 28, 37, 34, 7, 18, 4, 17, 24, 33, 6, 21, 22, 38, 14, 5, 31, 16, 43, 59, 52, 69, 52, 52, 52"
+IsChanceNode() = False
+IsSimultaneousNode() = False
+CurrentPlayer() = -4
+ObservationString(0) = "Vul: None\n        S T2\n        H QT9\n        D AQ763\n        C AK4\nS KQ7654        S 983\nH K53           H A8742\nD J9            D 4\nC J3            C Q872\n        S AJ\n        H J6\n        D KT852\n        C T965\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  Pass  \n\nDeclarer tricks: 8\nScore: N/S -50 E/W 50"
+ObservationString(1) = "Vul: None\n        S T2\n        H QT9\n        D AQ763\n        C AK4\nS KQ7654        S 983\nH K53           H A8742\nD J9            D 4\nC J3            C Q872\n        S AJ\n        H J6\n        D KT852\n        C T965\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  Pass  \n\nDeclarer tricks: 8\nScore: N/S -50 E/W 50"
+ObservationString(2) = "Vul: None\n        S T2\n        H QT9\n        D AQ763\n        C AK4\nS KQ7654        S 983\nH K53           H A8742\nD J9            D 4\nC J3            C Q872\n        S AJ\n        H J6\n        D KT852\n        C T965\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  Pass  \n\nDeclarer tricks: 8\nScore: N/S -50 E/W 50"
+ObservationString(3) = "Vul: None\n        S T2\n        H QT9\n        D AQ763\n        C AK4\nS KQ7654        S 983\nH K53           H A8742\nD J9            D 4\nC J3            C Q872\n        S AJ\n        H J6\n        D KT852\n        C T965\n\nWest  North East  South\n      1N    Pass  3N    \nPass  Pass  Pass  \n\nDeclarer tricks: 8\nScore: N/S -50 E/W 50"
+ObservationTensor(0): binvec(571, 0x4500000000000004000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000a402201183460000000000000000000000)
+ObservationTensor(1): binvec(571, 0x45000000000000008000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000050b00558804010000000000000000000000)
+ObservationTensor(2): binvec(571, 0x45000000000000010000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000020065024618208000000000000000000000)
+ObservationTensor(3): binvec(571, 0x45000000000000020000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000005098882060980000000000000000000000)
+Rewards() = [-50, 50, -50, 50]
+Returns() = [-50, 50, -50, 50]
